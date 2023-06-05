@@ -29,9 +29,6 @@
         let isDrawerOpen = localStorage.getItem('ada-embed_is-drawer-open')
         if (isDrawerOpen == 'true') {
           window.adaEmbed.toggle();
-          window.adaSettings = {
-          	greeting: "647e4549756cf0e32c536644";
-            }
         console.log("user is logged in and user details are set, name: " + name);
       } else {
         user_log = false;
@@ -51,6 +48,7 @@
         console.log("Ada Embed is done setting up. Chat support is now available.");
 
         checkLogin();
+      greeting: "647e4549756cf0e32c536644";
         }
       }
     }
