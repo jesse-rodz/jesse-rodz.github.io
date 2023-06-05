@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title></title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
   <script id="__ada" data-handle="demo-jesserodriguez" src="https://static.ada.support/embed2.js"></script>
 </head>
+
 <body>
   <script>
     
@@ -25,12 +29,9 @@
         let isDrawerOpen = localStorage.getItem('ada-embed_is-drawer-open')
         if (isDrawerOpen == 'true') {
           window.adaEmbed.toggle();
-          greeting: "647e4549756cf0e32c536644";
-          window.adaSettings = {
-          	greeting: "647e4549756cf0e32c536644";
-            }
+        }
         console.log("user is logged in and user details are set, name: " + name);
-      } else {
+      else {
         user_log = false;
         name = "Mr. Not Logged In";
         email = "notloggedin@test.com";
@@ -46,10 +47,13 @@
         isRolledOut
       }) => {
         console.log("Ada Embed is done setting up. Chat support is now available.");
+
         checkLogin();
         }
       }
     }
   </script>
+
 </body>
+
 </html>
