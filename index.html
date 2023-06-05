@@ -46,8 +46,8 @@
 
         checkLogin();
         
-        toggleCallback: (isDrawerOpen) => {    
-        if (isDrawerOpen == true) {
+        let isDrawerOpen = localStorage.getItem('ada-embed_is-drawer-open')
+        if (isDrawerOpen == 'true') {
           window.adaEmbed.toggle();
           greeting: "647e4549756cf0e32c536644";
         }
