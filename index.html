@@ -14,11 +14,11 @@
 <body>
   <script>
     
-    let user_log = false;
+    let user_log = localStorage.getItem('loggedIn');
     
     function checkLogin() {
       console.log("checkLogin() called")
-      if (user_log) {
+      if (user_log == "true") {
         name = "Jesse Rodriguez";
         email = "jesse.rodriguez@ada.support";
         console.log("user is logged in: " + user_log)
