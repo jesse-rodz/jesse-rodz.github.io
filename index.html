@@ -18,6 +18,7 @@
       console.log("checkLogin() called")
       let user_log = localStorage.getItem('loggedIn')
       if (user_log == "true") {
+        user_log = "True";
         name = "Jesse Rodriguez";
         email = "jesse.rodriguez@ada.support";
         console.log("user is logged in: " + user_log)
@@ -32,7 +33,7 @@
         }
         console.log("user is logged in and user details are set, name: " + name);
       } else {
-        user_log = false;
+        user_log = "False";
         name = "Mr. Not Logged In";
         email = "notloggedin@test.com";
         window.adaEmbed.setMetaFields({
