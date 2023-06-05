@@ -13,20 +13,6 @@
 
 <body>
   <script>
-    let user_log = false;
-
-    function changeUserLog() {
-      if (user_log) {
-        user_log = false;
-        console.log("user is logged out")
-        document.getElementById("userLoginStatus").value = "Log In"
-      } else {
-        user_log = true;
-        console.log("user is logged in")
-        document.getElementById("userLoginStatus").value = "Log Out"
-      }
-      checkLogin()
-    }
 
     function checkLogin() {
       console.log("checkLogin() called")
