@@ -1,0 +1,24 @@
+<input id="user-input" type="text">
+<button id="submit" disabled="true">Submit</button>
+
+<script>
+	// Assuming "widgetSDK" is part of the global namespace
+	const widgetSDK = new AdaWidgetSDK();
+
+	const buttonElement = document.getElementById("submit");
+	const inputElement = document.getElementById("user-input");
+
+	widgetSDK.init((event) => {
+		// Perform setup steps here. At this point:
+		// 1. Can detect if the Widget is "active"
+		// 2. Have access to data passed to the Widget
+
+		buttonElement.addEventListener("click", () => {
+			widgetSDK.sendUserData({
+				userData: inputElement.value
+			}, event => {
+				// Perform cleanup steps here. At this point data has been sent to Ada
+			})
+		});
+	});
+</script>
