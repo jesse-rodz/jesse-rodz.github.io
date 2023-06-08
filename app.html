@@ -1,33 +1,36 @@
-import AdaWidgetSDK from "@ada-support/ada-widget-sdk";
-const widgetSDK = new AdaWidgetSDK();
+<html lang="en">
 
-<input id="user-input" type="text">
-<button id="submit">Submit</button>
-<script>
-  // Assuming "widgetSDK" is part of the global namespace
-  const widgetSDK = new AdaWidgetSDK();
-  const buttonElement = document.getElementById("submit");
-  const inputElement = document.getElementById("user-input");
-  widgetSDK.init((event) => {
-    if (!widgetSDK.widgetIsActive) {
-      containerElement.innerHTML = "The widget is not active";
-      return;
-    }
-    const {
-      inputdata
-    } = widgetSDK.widgetInputs;
-    sdkInputElement.innerHTML = innerdata;
-    submitButtonElement.onclick = () => {
-      widgetSDK.sendUserData({
-        responseData: inputElement.value
-      }, (event) => {
-        if (event.type === "SEND_USER_DATA_SUCCESS") {
-          submitMessageElement.innerText = "Data was successfully submitted";
-          submitButtonElement.disabled = true;
-        } else {
-          submitMessageElement.innerText = "Data submission failed, please try again";
-        }
-      });
-    };
-  });
-</script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example Widget</title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+        padding: 10px;
+      }
+      #widget-container > * {
+        margin: 10px 2px;
+      }
+      #input-field {
+        width: 60vw;
+        padding: 5px;
+      }
+      #submit-button {
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="widget-container">
+      <div id="widget-input-data">Loading...</div>
+      <input id="input-field">
+      <button id="submit-button">Submit</button>
+      <div id="submit-message"></div>
+    </div>
+  </body>
+
+</html>
