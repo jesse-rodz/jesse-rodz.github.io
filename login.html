@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <input type="button" onclick="changeUserLog();updateStorage()" value="Log In" id="userLoginStatus" style="
+  <input type="button" onclick="changeUserLog();updateStorage();redirect()" value="Log In" id="userLoginStatus" style="
         position: fixed;
         top: 70px;
         left: 70px;"></input>
@@ -34,6 +34,10 @@
     
     function updateStorage() {
       localStorage.setItem('loggedIn', 'true');
+    }
+    
+    function redirect() {
+     window.location.href="https://jesse-rodz.github.io/";
     }
   </script>
 
