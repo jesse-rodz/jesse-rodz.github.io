@@ -11,11 +11,18 @@
   <body>
     <h1>Ada Agent-Assist Bot</h1>
 
-    <button onclick="adaEmbed.toggle()">Toggle Chat</button>
     <button onclick="adaEmbed.reset()">Reset Chat</button>
     <button onclick="adaEmbed.deleteHistory()">Delete Chat History</button>
 
+    <script>
+    	window.adaSettings = {
+      	parentElement: "customIframe"
+      }
+    </script>
+
     <script id="__ada" data-handle="demo-jesserodriguez" src="https://static.ada.support/embed2.js"></script>
+
+    <div id="customIframe" style="height: 500px; width: 500px;"></div>
   </body>
 
 </html>
