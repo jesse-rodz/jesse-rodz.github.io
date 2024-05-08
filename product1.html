@@ -1,34 +1,40 @@
-<!DOCTYPE html>
 <html>
 
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Product 1</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
+    <meta charset="utf-8" />
+    <title>Jesse Test</title>
     <script type="text/javascript">
       window.adaSettings = {
         metaFields: {
-          product: "Product1"
-        }
-      }
+          name: "Tester Testerson",
+        },
+        language: "en",
+        adaReadyCallback: () => {
+          // if the bot has not been triggered, keep it hidden
+          if (!window.sessionStorage.getItem("chatOpened"))
+            document.getElementById("ada-entry").style.display = "none";
+        },
+      };
 
     </script>
 
-    <script id="__ada" data-handle="demo-jesserodriguez" src="https://static.ada.support/embed2.js"></script>    
-    
+    <button id="showBot">
+      Show Bot
+    </button>
+
+    <script>
+      window.addEventListener("click", (e) => {
+            if (e.target === document.getElementById("showBot")) {
+              document.getElementById("ada-entry").style.display = "block";
+              // bot has been triggered so place value in local storage so other pages have access
+              window.sessionStorage.setItem("chatOpened", "yes");
+              window.adaEmbed.toggle();
+            }
+          })
+
+    </script>
+    <script id="__ada" data-handle="jesserodriguez-gr" src="https://static.ada.support/embed2.js"></script>
+
   </head>
-
-  <body>
-    <h1>Product 1</h1>
-
-    <input type="button" onclick="location.href='https://jesse-rodz.github.io/product2.html';" value="Go to Product2" />
-    <input type="button" onclick="location.href='https://jesse-rodz.github.io/product3.html';" value="Go to Product3" />
-    <input type="button" onclick="location.href='https://jesse-rodz.github.io/product4.html';" value="Go to Product4" />
-    <input type="button" onclick="location.href='https://jesse-rodz.github.io/product5.html';" value="Go to Product5" />
-
-  
-  </body>
 
 </html>
